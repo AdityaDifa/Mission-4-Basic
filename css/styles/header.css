@@ -1,0 +1,8 @@
+@layer components{
+    .header{
+        @apply w-full shadow-lg h-13 flex items-center px-2 py-2 justify-between bg-orange-600
+    }
+    .headerList{
+        @apply w-full sticky bg-gray-200 h-13 top-0 shadow-lg
+    }
+}

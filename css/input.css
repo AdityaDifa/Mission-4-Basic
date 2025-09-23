@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@import "./styles/header.css";
+@import "./styles/inputstyle.css";
+@import "./styles/button.css";
+
+@layer base{
+    h1{
+        @apply font-bold text-white text-lg
+    }
+}
