@@ -5,4 +5,13 @@
     .headerList{
         @apply w-full sticky bg-gray-200 h-13 top-0 shadow-lg
     }
+    .navbarMenu{
+       @apply absolute top-12 right-0 bg-white 
+    }
+    .navbarList{
+        @apply shadow-md border-1 p-2
+    }
+    .navbarList:active{
+        @apply bg-gray-100
+    }
 }

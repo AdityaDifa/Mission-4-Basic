@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add List</title>
+    <link href="../css/output.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="w-full">
+            <h1>Add Employee</h1>
+        </div>
+        <div class="w-full flex justify-end">
+            <!-- <a href=""><p>Tambahkan</p></a> -->
+        </div>
+    </header>
+    <main>
+        <div class="w-full p-5 flex flex-col items-center">
+            <div>
+                <h1 class="text-black text-3xl">Add Employee</h1>
+            </div>
+            <div class="my-2 w-full flex flex-col"> <!--input name-->
+                <label for="name">Input Name</label>
+                <input type="text" id="name" class="inputStyle">
+            </div>
+            <div class="my-2 w-full flex flex-col"> <!--input name-->
+                <label for="jabatan">Input Position</label>
+                <input type="text" id="position" class="inputStyle">
+            </div>
+            <div class="my-2 w-full flex flex-col">
+                <button class="submitButton" id="submitButton">Submit</button>
+            </div>
+    </main>
+
+    <script src="../js/controller/addEmployee.js" type="module"></script>
+</body>
+</html>

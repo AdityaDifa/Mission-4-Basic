@@ -1,5 +1,9 @@
 @layer components{
-    .filter{
-        @apply border-1 border-gray-200 rounded-sm w-[70%] h-8
+    .inputStyle{
+        @apply border-1 border-gray-200 rounded-sm w-full h-8 p-1
     }
+    .textArea{
+        @apply border-1 border-gray-200 rounded-sm w-full h-35 p-1 text-sm
+    }
+
 }

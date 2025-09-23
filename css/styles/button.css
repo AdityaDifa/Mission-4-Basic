@@ -1,8 +1,12 @@
 @layer components{
     .buttonSmall{
-        @apply border-1 p-1 h-8 rounded-sm
+        @apply border-1 p-1 h-8 rounded-sm h-auto
     }
     .buttonSmall:active{
         @apply bg-gray-200
     }
+    .submitButton{
+        @apply bg-green-400 h-auto p-1 w-full rounded-md shadow-lg text-white font-bold
+    }
+    
 }

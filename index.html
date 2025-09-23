@@ -5,31 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda</title>
     <link href="css/output.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 </head>
 <body>
     <header class="header">
-        <div class="w-full">
+        <div class="w-full"> <!--header kiri-->
             <h1>Aplikasi To-Do List</h1>
         </div>
-        <div class="w-full flex justify-end">
+        <div class="w-full flex justify-end"> <!--header kanan-->
             <!-- <a href=""><p>Tambahkan</p></a> -->
+            <button id="navbarButton"><i class="ph ph-list"></i></button>
+            <div class="navbarMenu hidden" id="navbarMenu">
+                <div class="navbarList">Check Employee List</div>   
+            </div>
         </div>
     </header>
     <main class="w-full">
         <div class="w-full px-2 py-6 flex justify-between items-center"> <!--settings top (filter, tombol tambahkan)-->
             <div class="flex items-center">
-                <select name="filter" id="filter" class="filter">
+                <!-- <select name="filter" id="filter" class="filter">
                     <option value="all">all</option>
                     <option value="on progress">on progress</option>
                     <option value="late">late</option>
                 </select>
                 <button class="ml-2 buttonSmall">
                     <p>Search</p>
-                </button>
+                </button> -->
             </div>
             <div class="flex justify-end">
-                <button class="buttonSmall">
-                    <p>Tambahkan</p>
+                <button id="addListButton" class="buttonSmall">
+                    <p>Add List</p>
+                </button>
+                <button id="addEmployeeButton" class="buttonSmall ml-1">
+                    <p>Add Employee</p>
                 </button>
             </div>
         </div>
@@ -51,6 +68,16 @@
                 <p>a</p>
             </div>
         </div>
+        <div class="w-full mt-1"> <!--done-->
+            <div class="headerList flex items-center bg-green-500"> <!--header-->
+                <h1 class="ml-3">Done</h1>
+            </div>
+            <div> <!--late list-->
+                <p>a</p>
+                <p>a</p>
+            </div>
+        </div>
     </main>
+    <script type="module" src="./js/controller/index.js"></script>
 </body>
 </html>
