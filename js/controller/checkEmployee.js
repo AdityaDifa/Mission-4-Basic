@@ -11,7 +11,6 @@ navbarMenu.addEventListener("click", () => changePage(""))
 
 //for list employees
 const employees = getEmployees();
-console.log(employees);
 employees.forEach(employee => {
     cardEmployee("listEmployees",employee);
 })

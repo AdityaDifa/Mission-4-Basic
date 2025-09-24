@@ -20,9 +20,15 @@
             <div>
                 <h1 class="text-black text-3xl">Add List</h1>
             </div>
+            <div class="mt-2 w-full"> <!--select employee-->
+                <label for="selectEmployee">Select Employee</label>
+                <select name="selectEmployee" id="selectEmployee" class="filter w-full border-1">
+
+                </select>
+            </div>
             <div class="mt-2 w-full"> <!--priority-->
                 <label for="priority">Priority :</label>
-                <select name="priority" id="priority" class="filter w-full bg-yellow-200" onchange="onChangePriority()">
+                <select name="priority" id="priority" class="filter w-full bg-yellow-200">
                     <option value="low" class="bg-yellow-200">low</option>
                     <option value="medium" class="bg-orange-300">medium</option>
                     <option value="high" class="bg-red-400">high</option>
@@ -32,23 +38,11 @@
                 <label for="textList">Text List : </label>
                 <textarea name="textList" id="textList" class="textArea" maxlength="300"></textarea>
             </div>
+            <div class="mt-2 w-full flex justify-center">
+                <button class="submitButton" id="submitButton">Submit</button>
+            </div>
         </div>
     </main>
-    <script>
-        const priority = document.getElementById("priority");
-        function onChangePriority(){
-            priority.classList.remove("bg-yellow-200","bg-orange-300","bg-red-400");
-            if(priority.value == "low"){
-                priority.classList.add("bg-yellow-200");
-            }
-            else if(priority.value == "medium"){
-                priority.classList.add("bg-orange-300");
-            }
-            else if(priority.value == "high"){
-                priority.classList.add("bg-red-400");
-            };
-        }
-
-    </script>
+    <script type="module" src="../js/controller/addList.js"></script>
 </body>
 </html>
