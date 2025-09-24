@@ -8,5 +8,7 @@
     .submitButton{
         @apply bg-green-400 h-auto p-1 w-full rounded-md shadow-lg text-white font-bold
     }
-    
+    .deleteButton{
+        @apply w-auto h-auto p-1 bg-red-500 shadow-md rounded-md text-white font-semibold
+    }
 }

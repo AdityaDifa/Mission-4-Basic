@@ -3,6 +3,7 @@
 @import "./styles/header.css";
 @import "./styles/inputstyle.css";
 @import "./styles/button.css";
+@import "./styles/card.css";
 
 @layer base{
     h1{

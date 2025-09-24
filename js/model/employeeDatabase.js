@@ -1,7 +1,7 @@
 import { getDatabase,checkDatabase,addDatabase } from "./database.js";
 
 const key = "employees";
-const idKey = "idEmployees"
+const idKey = "idEmployees";
 
 const addEmployee = (name, position)=>{
     let idEmployees = 1;
@@ -25,5 +25,27 @@ const addEmployee = (name, position)=>{
     addDatabase(idKey,idEmployees)
 
 }
+const getEmployees = () => {
+    if(checkDatabase(key)){
+        return getDatabase(key);
+    }
+    else{
+        return [];
+    }
+}
 
-export {addEmployee};
+const deleteEmployeeId = (idEmployee) => {
+    let employees = [];
+    
+    if(checkDatabase(key)){
+        employees = getDatabase(key);
+        employees = employees.filter(employee => employee.id !== idEmployee);
+
+        addDatabase(key,employees);
+    }
+    else{
+        return [];
+    }
+}
+
+export {addEmployee,getEmployees,deleteEmployeeId};

@@ -1,0 +1,5 @@
+@layer components{
+    .employeeListCard{
+        @apply w-full bg-gray-100 shadow-md my-2 flex justify-between items-center
+    }
+}
