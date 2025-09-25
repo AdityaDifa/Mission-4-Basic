@@ -12,7 +12,7 @@ const getLists = () =>{
         }
 }
 
-const addList = (employee, priority, message)=>{
+const addList = (employee, priority, message,deadline)=>{
     let idList = 1;
     let lists = [];
     let date = new Date();
@@ -28,6 +28,7 @@ const addList = (employee, priority, message)=>{
         'priority':priority,
         'message':message,
         'date': date,
+        'deadline':deadline,
         'progress':false
     }
 

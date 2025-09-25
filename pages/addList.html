@@ -34,7 +34,11 @@
                     <option value="high" class="bg-red-400">high</option>
                 </select>
             </div>
-            <div class="mt-2 w-full flex flex-col">
+            <div class="mt-2 w-full">
+                <label for="deadline">Deadline</label>
+                <input type="datetime-local" id="deadline" class="w-full border-1 rounded-sm">
+            </div>
+            <div class="mt-2 w-full flex flex-col"> <!--text area-->
                 <label for="textList">Text List : </label>
                 <textarea name="textList" id="textList" class="textArea" maxlength="300"></textarea>
             </div>

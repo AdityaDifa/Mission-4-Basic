@@ -11,6 +11,8 @@ const CardList = (parent, list) => {
     const employee = document.createElement('p');
     const priority = document.createElement('p');
     const message = document.createElement('p');
+    const dateCreated = document.createElement('p');
+    const deadline = document.createElement('p');
 
     employee.classList.add('font-bold')
 
@@ -38,7 +40,10 @@ const CardList = (parent, list) => {
 
 
     leftDiv.appendChild(employee);
+    leftDiv.appendChild(dateCreated);
+    leftDiv.appendChild(deadline);
     leftDiv.appendChild(message);
+
 
     rightDiv.appendChild(priority);
     rightDiv.appendChild(deleteButton);
@@ -47,6 +52,10 @@ const CardList = (parent, list) => {
     employee.textContent = list.employee;
     priority.textContent = list.priority;
     message.textContent = list.message;
+    dateCreated.textContent = list.date;
+    deadline.textContent = list.deadline;
+
+    priority.classList.add('flex', 'items-center')
 
     if(list.priority == 'low'){
         priority.classList.add('lowPriority');

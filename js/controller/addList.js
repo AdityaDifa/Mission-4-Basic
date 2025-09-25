@@ -21,10 +21,12 @@ employees.forEach(employee => {
     selectEmployee.appendChild(optionEmployee);
 })
 
-//submit button
-const message = document.getElementById("textList");
 const submitButton = document.getElementById('submitButton');
+//submit button
 submitButton.addEventListener('click', () =>{
-    addList(selectEmployee.value,priority.value, message.value);
+    const dateChoose = document.getElementById('deadline');
+    const deadline = new Date(dateChoose.value)
+    const message = document.getElementById("textList");
+    addList(selectEmployee.value,priority.value, message.value,deadline);
     alert('list has been added');
 })
