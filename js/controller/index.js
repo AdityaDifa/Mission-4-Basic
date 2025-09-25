@@ -15,8 +15,16 @@ navbar.addEventListener("click", () => navbarMenu.classList.toggle("hidden"));
 navbarMenu.addEventListener("click", () => changePage("./pages/checkEmployee.html"))
 
 //list view
+const divOnProgress = document.getElementById('onProgress');
+const divLate = document.getElementById('late');
+const divDone = document.getElementById('done');
 const lists = getLists();
+
+
 lists.forEach(list => {
-    console.log(list.employee)
-    CardList('onProgress',list.employee, list.priority, list.message)
+    const dateNow = new Date();
+    const dateList = new Date(list.date);
+    if(list.progress == true){CardList('done',list)}
+    else if(dateList < dateNow){CardList('onProgress', list)}
+    else if(dateList > dateNow){CardList('late',list)}
 })

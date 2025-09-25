@@ -27,7 +27,8 @@ const addList = (employee, priority, message)=>{
         'employee':employee,
         'priority':priority,
         'message':message,
-        'date': date
+        'date': date,
+        'progress':false
     }
 
     lists.push(list);
@@ -38,4 +39,18 @@ const addList = (employee, priority, message)=>{
 
 }
 
-export {addList, getLists};
+const deleteList = (idList) => {
+    let lists = [];
+        
+        if(checkDatabase(key)){
+            lists = getDatabase(key);
+            lists = lists.filter(list => list.id !== idList);
+    
+            addDatabase(key,lists);
+        }
+        else{
+            return [];
+        }
+}
+
+export {addList, getLists, deleteList};
