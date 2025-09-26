@@ -1,4 +1,4 @@
-import { getDatabase,checkDatabase,addDatabase } from "./database.js";
+import { getDatabase,checkDatabase,addDatabase,deleteAll } from "./database.js";
 
 const key = "list";
 const idKey = "listId";
@@ -54,4 +54,9 @@ const deleteList = (idList) => {
         }
 }
 
-export {addList, getLists, deleteList};
+const deleteAllList = () => {
+    deleteAll(key);
+    deleteAll(idKey);
+}
+
+export {addList, getLists, deleteList,deleteAllList};

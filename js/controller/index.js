@@ -1,6 +1,7 @@
 import changePage from '../view/changePage.js';
 import { getLists } from '../model/listDatabase.js';
 import CardList from '../view/cardList.js';
+import { deleteAllList } from '../model/listDatabase.js';
 
 //navbar list menu
 const addListButton = document.getElementById("addListButton");
@@ -31,4 +32,15 @@ lists.forEach(list => {
         CardList('late', list);
     }
 });
+
+//delete all button
+const deleteAllButton = document.getElementById('deleteAllButton');
+deleteAllButton.addEventListener('click',()=> {
+    const confirmDeleteAll = confirm('are you sure want to delete all lists ?');
+
+    if(confirmDeleteAll){
+        deleteAllList();
+        changePage("./pages/checkEmployee.html");
+    }
+})
 

@@ -14,6 +14,9 @@ const editDatabase = (key, id, keyData, valueData) => {
     items = items.map(item => item.id === id ? {...item, [keyData] : valueData} : item);
     addDatabase(key, items);
 }
+const deleteAll = (key) => {
+    localStorage.removeItem(key);
+}
 
 
-export {getDatabase,checkDatabase,addDatabase, editDatabase};
+export {getDatabase,checkDatabase,addDatabase, editDatabase,deleteAll};

@@ -1,5 +1,6 @@
 import { deleteList } from "../model/listDatabase.js";
 import { editDatabase } from "../model/database.js";
+import { dateConverter } from "./dateConverter.js";
 
 const CardList = (parent, list) => {
     //create div
@@ -51,9 +52,9 @@ const CardList = (parent, list) => {
 
     employee.textContent = list.employee;
     priority.textContent = list.priority;
-    message.textContent = list.message;
-    dateCreated.textContent = list.date;
-    deadline.textContent = list.deadline;
+    message.innerHTML = `message : <br>${list.message}`;
+    dateCreated.textContent = `created ${dateConverter(list.date)}`;
+    deadline.textContent = `deadline ${dateConverter(list.deadline)}`;
 
     priority.classList.add('flex', 'items-center')
 
