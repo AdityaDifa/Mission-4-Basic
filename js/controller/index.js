@@ -40,7 +40,7 @@ deleteAllButton.addEventListener('click',()=> {
 
     if(confirmDeleteAll){
         deleteAllList();
-        changePage("./pages/checkEmployee.html");
+        changePage("");
     }
 })
 

@@ -1,6 +1,7 @@
 import changePage from '../view/changePage.js';
 import cardEmployee from '../view/cardEmployee.js';
 import { getEmployees } from '../model/employeeDatabase.js';
+import { deleteAllEmployees } from '../model/employeeDatabase.js';
 
 //for navbar list memu
 const navbar = document.getElementById("navbarButton");
@@ -14,3 +15,14 @@ const employees = getEmployees();
 employees.forEach(employee => {
     cardEmployee("listEmployees",employee);
 })
+
+//delete all employees button
+const deleteAllButton = document.getElementById('deleteAllButton');
+deleteAllButton.addEventListener('click', ()=> {
+    const confirmDeleteAll = confirm('are you sure want to delete all employees?');
+    if(confirmDeleteAll){
+        deleteAllEmployees();
+        changePage('')
+    }
+})
+
